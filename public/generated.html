@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generated Questions</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body data-page="generated">
+  <nav class="sidebar">
+    <h1>AI Practice Question Generator</h1>
+    <div class="nav-links">
+      <a href="index.html" class="nav-item" data-page="home">Home</a>
+      <a href="upload.html" class="nav-item" data-page="upload">Upload Notes</a>
+      <a href="generated.html" class="nav-item" data-page="generated">Generated Questions</a>
+      <a href="history.html" class="nav-item" data-page="history">History</a>
+    </div>
+    <p id="ai-mode" class="ai-mode"></p>
+  </nav>
+
+  <main class="container questions-section">
+    <div id="page-message"></div>
+
+    <div id="loading" class="loading-state">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Loading your questions…</p>
+    </div>
+
+    <section id="empty-state" class="empty-state" hidden>
+      <h2>No questions yet</h2>
+      <p>Upload some notes and your generated practice questions will show up here.</p>
+      <a href="upload.html" class="welcome-btn">Upload Notes</a>
+    </section>
+
+    <section id="results" hidden>
+      <header class="results-header">
+        <div>
+          <h2 id="submission-title">Your Practice Questions</h2>
+          <p class="meta" id="submission-meta"></p>
+        </div>
+        <div class="score-box" id="score-box" hidden>
+          <span class="score-label">Score</span>
+          <span id="score">0 / 0</span>
+        </div>
+      </header>
+
+      <div class="toolbar">
+        <button type="button" class="small-btn" id="reveal-all-btn">Show all answers</button>
+        <button type="button" class="small-btn secondary" id="reset-btn">Reset</button>
+        <button type="button" class="small-btn secondary" id="notes-toggle" aria-expanded="false" aria-controls="original-notes">Show original notes</button>
+        <button type="button" class="small-btn secondary" id="print-btn">Print</button>
+      </div>
+
+      <pre id="original-notes" class="original-notes" hidden></pre>
+
+      <ol id="question-list" class="question-list"></ol>
+    </section>
+  </main>
+
+  <footer>© 2026 AI Practice Question Generator</footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/generated.js"></script>
+</body>
+</html>

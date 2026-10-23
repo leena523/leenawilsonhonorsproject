@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Error</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body data-page="error">
+  <nav class="sidebar">
+    <h1>AI Practice Question Generator</h1>
+    <div class="nav-links">
+      <a href="/index.html" class="nav-item" data-page="home">Home</a>
+      <a href="/upload.html" class="nav-item" data-page="upload">Upload Notes</a>
+      <a href="/generated.html" class="nav-item" data-page="generated">Generated Questions</a>
+      <a href="/history.html" class="nav-item" data-page="history">History</a>
+    </div>
+    <p id="ai-mode" class="ai-mode"></p>
+  </nav>
+
+  <main class="container">
+    <div class="error-card" role="alert">
+      <div class="error-icon" id="error-icon" aria-hidden="true">!</div>
+      <h2 id="error-title">Something Went Wrong</h2>
+      <p id="error-text">The AI service is currently unavailable or rate-limited. Please try again later.</p>
+      <p id="error-tip" class="error-tip"></p>
+      <p id="countdown" class="countdown" hidden></p>
+      <p class="saved-note">Your notes were saved as a draft — they’ll still be on the Upload page.</p>
+      <div class="error-actions">
+        <a href="/upload.html" class="welcome-btn" id="retry-btn">Try Again</a>
+        <a href="/history.html" class="small-btn secondary">View History</a>
+      </div>
+      <p class="error-code" id="error-code"></p>
+    </div>
+  </main>
+
+  <footer>© 2026 AI Practice Question Generator</footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/error.js"></script>
+</body>
+</html>

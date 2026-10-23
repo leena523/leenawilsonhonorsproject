@@ -1,0 +1,18 @@
+{
+  "name": "ai-practice-question-generator",
+  "version": "1.0.0",
+  "description": "Turns class notes into AI-generated practice questions (Express + Groq + SQLite).",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "author": "Leena Wilson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

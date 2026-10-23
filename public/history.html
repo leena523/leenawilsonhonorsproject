@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>History</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body data-page="history">
+  <nav class="sidebar">
+    <h1>AI Practice Question Generator</h1>
+    <div class="nav-links">
+      <a href="index.html" class="nav-item" data-page="home">Home</a>
+      <a href="upload.html" class="nav-item" data-page="upload">Upload Notes</a>
+      <a href="generated.html" class="nav-item" data-page="generated">Generated Questions</a>
+      <a href="history.html" class="nav-item" data-page="history">History</a>
+    </div>
+    <p id="ai-mode" class="ai-mode"></p>
+  </nav>
+
+  <main class="container">
+    <h2>Past Submissions</h2>
+    <p class="page-intro">Your study archive. Search, filter, reopen a set of questions, or delete ones you no longer need.</p>
+
+    <form class="filters" id="filters" role="search">
+      <div class="form-field">
+        <label for="search">Search</label>
+        <input type="search" id="search" placeholder="Search titles and notes…">
+      </div>
+      <div class="form-field narrow">
+        <label for="subject-filter">Subject</label>
+        <select id="subject-filter">
+          <option value="">All subjects</option>
+        </select>
+      </div>
+    </form>
+
+    <div id="page-message"></div>
+
+    <p class="result-count" id="result-count" aria-live="polite"></p>
+
+    <div id="loading" class="loading-state">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Loading history…</p>
+    </div>
+
+    <section id="empty-state" class="empty-state" hidden>
+      <h3 id="empty-title">No submissions yet</h3>
+      <p id="empty-text">Once you generate questions, they'll be saved here so you can come back to them.</p>
+      <a href="upload.html" class="welcome-btn" id="empty-cta">Upload Notes</a>
+    </section>
+
+    <ul id="history-list" class="history-list"></ul>
+  </main>
+
+  <footer>© 2026 AI Practice Question Generator</footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/history.js"></script>
+</body>
+</html>
